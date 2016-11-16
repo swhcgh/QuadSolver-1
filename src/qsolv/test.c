@@ -6,7 +6,7 @@
 	
 int main(int argc, char * argv[]) {
 	cunit_init();
-
+	printf("line 19 and 30 should fail\n");
 	qsStruct q;
 	q.a = 1;
 	q.b = 2;
@@ -17,7 +17,7 @@ int main(int argc, char * argv[]) {
 	assert_feqrerr("Root 1",q.root1, -1.0, 10.0*cunit_dmacheps );
 	// Fail this time
 	assert_feqrerr("Root 1",q.root1, -1.001, 10.0*cunit_dmacheps );
-
+	
 	q.a = 2;
 	q.b = 3;
 	q.c = 1;

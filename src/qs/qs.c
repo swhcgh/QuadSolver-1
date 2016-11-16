@@ -23,7 +23,7 @@ loop(){
 	char readin[256];
 	int ret;
 
-	printf("Please enter a,b, and c separated by spaces\n (i.e., <a> <b> <c>) or \"q\" to quit\n");
+	printf("\nPlease enter a,b, and c separated by spaces (i.e., <a> <b> <c>) or \"q\" to quit\n");
 	//Inputs from command line
 	fgets(readin,sizeof(readin), stdin);
 

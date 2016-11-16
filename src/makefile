@@ -1,4 +1,5 @@
 SUBDIRS = qsolv input output formatting validation qs
+TESTDIRS = qsolv input formatting
 CLEAN = make clean
 TEST = make test
 OUTPUT = output/output.o
@@ -7,11 +8,6 @@ FORMAT = formatting/formatting.o
 QSOLV = qsolv/qsolv.o
 QS = qs/qs.o
 VALID = validation/validation.o
-
-
-main:
-	for dir in $(SUBDIRS); do \
-	gcc -g -o qsolver $(QS) $(QSOLV) $(VALID) $(FORMAT) $(INPUT) $(OUTPUT)
 
 all:
 	for dir in $(SUBDIRS); do \
@@ -25,14 +21,6 @@ clean:
 	done
 
 test:
-	for dir in $(SUBDIRS); do \
+	for dir in $(TESTDIRS); do \
 		$(TEST) -C $$dir; \
 	done
-
-testfull:
-	for dir in $(SUBDIRS); do \
-		$(TEST) -C $$dir; \
-	done
-	gcc -g -o qsolver $(QS) $(QSOLV) $(VALID) $(FORMAT) $(INPUT) $(OUTPUT)
-	./qsolver < ../tests/test1.txt
-	./qsolver < ../tests/test2.txt

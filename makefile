@@ -4,6 +4,7 @@ MAKE = make all
 CLEAN = make clean
 TEST = make test
 SUBDIRS = src
+CLEANDIRS = src tests
 INSDIR = install
 INS = install/qsolver
 OUTPUT = src/output/output.o
@@ -27,13 +28,12 @@ all:
 deploy: all
 	gcc -std=c99 -g -o $(INS) $(QS) $(QSOLV) $(VALID) $(FORMAT) $(INPUT) $(OUTPUT) -lm
 
-
 run: deploy
 	$(INSDIR)/./qsolver
 
 clean:
 	rm -rf $(INS)
-	for dir in $(SUBDIRS); do \
+	for dir in $(CLEANDIRS); do \
 		$(CLEAN) -C $$dir; \
 	done
 

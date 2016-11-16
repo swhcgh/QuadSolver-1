@@ -8,6 +8,11 @@ Installation
 This is installed by make via the command line.
 
 
+Use
+-----
+The program takes no arguments from the command line directly. It will prompt the user for a single line containing three arguments separated by spaces, and return an error message if the input is in an incorrect format, or the answer(s) (if there are one or more).
+
+
 Commands
 ---------
 make all: builds all object files required to install
@@ -15,10 +20,6 @@ make deploy: installs to the INSTALL folder
 make clean: removes all unnecessary objects after installation
 make test: runs unit tests
 make testfull: runs production tests
-
-Use
------
-The program takes no arguments from the command line directly. It will prompt the user for a single line containing three arguments separated by spaces, and return an error message if the input is in an incorrect format, or the answer(s) (if there are one or more).
 
 
 FAQ
@@ -35,5 +36,4 @@ What coding standard was used for this project?
 
 Versions
 --------
-1.0
-11-15-16
+1.0: Released 11-16-16

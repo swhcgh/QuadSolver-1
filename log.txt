@@ -5,3 +5,4 @@ Determinant is < 0, no roots.
 Determinant is < 0, no roots.
 Determinant is < 0, no roots.
 Determinant is < 0, no roots.
+Too few arguments, please enter 3 arguments.

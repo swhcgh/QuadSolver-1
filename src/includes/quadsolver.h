@@ -76,3 +76,6 @@ int formatAnswer(qsStruct * ans);
 
 int 
 main(int argc, char * argv[]);
+
+int
+loop();

@@ -51,7 +51,7 @@ int erlog(char * msg){
 
 	FILE * fp;
 	fp = fopen("log.txt", "a+");
-	fprintf(fp, msg);
+	fprintf(fp, "%s", msg);
 	if(fp == NULL){
 		printf("Can't even log errors! Exiting\n");
 		exit(0);

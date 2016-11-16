@@ -25,7 +25,7 @@ loop(){
 
 	printf("\nPlease enter a,b, and c separated by spaces (i.e., <a> <b> <c>) or \"q\" to quit\n");
 	//Inputs from command line
-	fgets(readin,sizeof(readin), stdin);
+	char * r = fgets(readin,sizeof(readin), stdin);
 
 	// Quit command
 	if(readin[0] == 'q' ) {

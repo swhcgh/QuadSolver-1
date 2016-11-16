@@ -27,8 +27,6 @@ takeInputs(char* readin)
 	memset(strC, ' ', 256/3);
 	memset(strValidate, ' ', 256/3);
 
-	printf("%s\n", strValidate);
-
 	sscanf(readin, "%s %s %s %s", strA, strB, strC, strValidate);
 	
 
